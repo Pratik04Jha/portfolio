@@ -1,103 +1,66 @@
+import ColorfulButton from "@/components/ui/ColorfulButton";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="h-screen w-full bg-black text-white flex items-center justify-center px-4 relative overflow-hidden">
+      <div className="z-10 text-center flex flex-col items-center ">
+        {/* <div className="relative w-[200px] h-[200px] mb-4 flex items-center justify-between"> */}
+          {/* <div className="absolute inset-0 rounded-full top-0 left-0  bg-[conic-gradient(red,orange,yellow,green,blue,indigo,violet,red)] animate-spin-slow z-0"></div>
+          <Image
+            src="/Creator.jpg"
+            width={192}
+            height={192}
+            alt="This is the image of the creator"
+            className="rounded-full relative z-20 ml-1"
+          />
+        </div> */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4">
+          Creator of Digital Empires
+        </h1>
+        <p className="text-lg sm:text-xl md:text-xl text-white max-w-2xl mx-auto mb-8">
+          Architect of code. Visionary of virtual realms. I don’t just design
+          websites - I engineer experiences, break boundaries, and leave echoes
+          in the digital world. A mind wired to conquer, not conform.
+        </p>
+        <Link href="/projects">
+          <ColorfulButton />
+        </Link>
+      </div>
+      <svg
+        width="800"
+        height="400"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute bottom-0 left-0 w-full h-full z-1 pointer-events-none"
+        style={{
+          WebkitMaskImage: "radial-gradient( black, transparent )",
+          maskImage: "linear-gradient(to bottom, transparent, black 500%)",
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
+        }}
+      >
+        <defs>
+          <pattern
+            id="tilePattern"
+            width="50"
+            height="50"
+            patternUnits="userSpaceOnUse"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <rect width="40" height="40" fill="transparent" />
+            <rect
+              width="50"
+              height="50"
+              fill="none"
+              stroke="#555"
+              stroke-width="1"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#tilePattern)" />
+      </svg>
+      <div className="absolute h-[40px] blur-[100px] animate-rainbow-stripe bg-[length:200%_100%] w-full top-[90%] z-1000 -inset-100  bg-[linear-gradient(to_left,red,orange,yellow,green,cyan,blue,violet,red)] opacity-100  pointer-events-none left-0 " />
     </div>
   );
 }
