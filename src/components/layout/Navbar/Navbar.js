@@ -8,7 +8,7 @@ const linkData = [
   { name: "Programming", href: "/" },
   { name: "Chess", href: "/chess" },
   { name: "Rubik's cube", href: "/" },
-  { name: "Art gallery", href: "/" },
+  { name: "Art gallery", href: "/artGallery" },
   { name: "Blogs", href: "/" },
   { name: "About", href: "/" },
   { name: "Contact", href: "/" },
