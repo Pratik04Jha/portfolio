@@ -5,13 +5,14 @@ import ToggleGridDropdown from "./ToggleGridDropdown";
 const linkData = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
-  { name: "Programming", href: "/" },
+  { name: "Programming", href: "/programming" },
   { name: "Chess", href: "/chess" },
-  { name: "Rubik's cube", href: "/" },
+  { name: "Rubik's cube", href: "/rubiksCube" },
   { name: "Art gallery", href: "/artGallery" },
-  { name: "Blogs", href: "/" },
-  { name: "About", href: "/" },
-  { name: "Contact", href: "/" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+  { name: "Education", href: "/education" },
 ];
 
 export default function Navbar() {

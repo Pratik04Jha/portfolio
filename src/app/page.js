@@ -1,10 +1,10 @@
 import ColorfulButton from "@/components/ui/ColorfulButton";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full bg-black text-white flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="h-screen w-full bg-[#101010] text-white flex items-center justify-center px-4 relative overflow-hidden">
       <div className="z-10 text-center flex flex-col items-center ">
         {/* <div className="relative w-[200px] h-[200px] mb-4 flex items-center justify-between"> */}
           {/* <div className="absolute inset-0 rounded-full top-0 left-0  bg-[conic-gradient(red,orange,yellow,green,blue,indigo,violet,red)] animate-spin-slow z-0"></div>
