@@ -112,7 +112,7 @@ const truncateText = (text, limit = 100) => {
 
 export default function ArtGallery() {
   return (
-    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8 pt-20">
+    <div className="min-h-screen bg-[#101010] py-12 px-4 sm:px-6 lg:px-8 pt-20">
       <Head>
         <title>Art Gallery | Contemporary Works</title>
         <meta name="description" content="Explore our collection of contemporary artworks" />

@@ -132,3 +132,15 @@ body {
   transition: width 0.3s ease-in-out;
   /* box-shadow: 0 0 30px 1px #52A8FF; */
 /* } */
+
+
+.fast-in-slow-out {
+  transition-property: box-shadow;
+  transition-duration: 200ms;      /* Fast on hover */
+  transition-timing-function: ease-in;
+}
+
+.fast-in-slow-out:not(:hover) {
+  transition-duration: 1500ms;      /* Slow fade when not hovered */
+  transition-timing-function: ease-out;
+}
