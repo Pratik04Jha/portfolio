@@ -1,14 +1,15 @@
 export default function BoxComponent() {
   return (
-    <div className="">
+    <div className="flex flex-col items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="150"
-        height="150"
+        width="160"
+        height="160"
         viewBox="0 0 48 48"
-        className="ml-6"
+        style={{ filter: "drop-shadow(0px 0px 50px #689F38)" }}
+        className="ml-4"
       >
         <path
           fill="#689f38"
@@ -36,6 +37,8 @@ export default function BoxComponent() {
           d="M24.683,4.727c0.372,0.973-0.526,2.556-2.006,3.536c-1.48,0.979-2.982,0.984-3.354,0.011 s0.526-2.556,2.006-3.536S24.31,3.753,24.683,4.727z"
         ></path>
       </svg>
+
+      <h1 className="text-4xl cursor-default text-center pb-5 bg-gradient-to-l from-[#ffffff5f] via-white to-[#ffffff5f] bg-clip-text text-transparent">Chess.com</h1>
     </div>
   );
 }
