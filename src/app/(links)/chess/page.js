@@ -1,5 +1,6 @@
-'use client';
-import  RatingGrid  from "./RatingsGrid";
+"use client";
+import BoxComponent from "./BoxComponent";
+import RatingGrid from "./RatingsGrid";
 
 const chessData = [
   { title: "Rapid", rating: 781 },
@@ -21,8 +22,14 @@ const lichessData = [
 
 export default function Chess() {
   return (
-    <div className="flex justify-evenly items-center flex-col lg:flex-row h-auto min-h-screen bg-[#101010] p-6 gap-10">
-      <RatingGrid
+   <main className="flex flex-col  items-center justify-center pt-20">
+      <h1 className=" text-3xl md:text-5xl cursor-default font-normal w-[40%] pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
+        More Than a Game. A Battlefield of Brilliance
+      </h1>
+
+      <BoxComponent />
+
+      {/* <RatingGrid
         title="Chess.com"
         logo="/chess logo.png"
         data={chessData}
@@ -35,7 +42,7 @@ export default function Chess() {
         data={lichessData}
         link="https://lichess.org/@/pratikthejha"
         delay={300}
-      />
-    </div>
+      /> */}
+    </main>
   );
 }

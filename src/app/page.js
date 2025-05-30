@@ -29,7 +29,7 @@ export default function Home() {
           <ColorfulButton />
         </Link>
       </div>
-      <svg
+      {/* <svg
         width="800"
         height="400"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ export default function Home() {
         </defs>
         <rect width="100%" height="100%" fill="url(#tilePattern)" />
       </svg>
-      <div className="absolute h-[40px] blur-[100px] animate-rainbow-stripe bg-[length:200%_100%] w-full top-[90%] z-1000 -inset-100  bg-[linear-gradient(to_left,red,orange,yellow,green,cyan,blue,violet,red)] opacity-100  pointer-events-none left-0 " />
+      <div className="absolute h-[40px] blur-[100px] animate-rainbow-stripe bg-[length:200%_100%] w-full top-[90%] z-1000 -inset-100  bg-[linear-gradient(to_left,red,orange,yellow,green,cyan,blue,violet,red)] opacity-100  pointer-events-none left-0 " /> */}
     </div>
   );
 }

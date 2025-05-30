@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #101010;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #101010;
     --foreground: #ffffff;
   }
 }
@@ -136,11 +136,28 @@ body {
 
 .fast-in-slow-out {
   transition-property: box-shadow;
-  transition-duration: 200ms;      /* Fast on hover */
+  transition-duration: 200ms;
   transition-timing-function: ease-in;
 }
 
 .fast-in-slow-out:not(:hover) {
-  transition-duration: 1500ms;      /* Slow fade when not hovered */
+  transition-duration: 1500ms;
   transition-timing-function: ease-out;
 }
+
+
+/* 
+.backgroundShadow::before{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #0F2F57;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: -2000;
+} */
+
+
