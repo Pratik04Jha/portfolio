@@ -27,15 +27,6 @@ const chessData = [
   },
 ];
 
-const lichessData = [
-  { title: "Rapid", rating: 1352 },
-  { title: "Blitz", rating: 1312 },
-  { title: "Bullet", rating: 1210 },
-  { title: "Classical", rating: 1550 },
-  { title: "Daily", rating: 1822 },
-  { title: "Puzzle", rating: 1832 },
-];
-
 export default function Chess() {
   return (
     <main className="flex flex-col  items-center justify-center pt-20">
@@ -52,14 +43,7 @@ export default function Chess() {
         link="https://chess.com/members/pratikthejha"
         delay={0}
       />
-
-      {/* <RatingGrid
-        title="Lichess.com"
-        logo="/lichess logo.png"
-        data={lichessData}
-        link="https://lichess.org/@/pratikthejha"
-        delay={300}
-      /> */}
+      
     </main>
   );
 }
