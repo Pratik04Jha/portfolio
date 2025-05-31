@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar/Navbar";
 import "./globals.css";
 import { Providers } from "./providers";
 import Head from "next/head";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Pratik Jha | Developer, Designer, Creator",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
