@@ -1,11 +1,15 @@
 import ColorfulButton from "@/components/ui/ColorfulButton";
 import Link from "next/link";
+import Page from "./(links)/programming/page";
+import ProjectsPage from "./(links)/projects/page";
+import Chess from "./(links)/chess/page";
+import ContactPage from "./(links)/contact/page";
 // import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full bg-[#101010] text-white flex items-center justify-center px-4 relative overflow-hidden">
-      <div className="z-10 text-center flex flex-col items-center ">
+    <div className="h-full  w-full flex-col bg-[#101010] text-white flex items-center justify-center px-4 relative overflow-hidden">
+      <div className="z-10 h-screen justify-center text-center flex flex-col items-center ">
         {/* <div className="relative w-[200px] h-[200px] mb-4 flex items-center justify-between"> */}
           {/* <div className="absolute inset-0 rounded-full top-0 left-0  bg-[conic-gradient(red,orange,yellow,green,blue,indigo,violet,red)] animate-spin-slow z-0"></div>
           <Image
@@ -29,6 +33,13 @@ export default function Home() {
           <ColorfulButton />
         </Link>
       </div>
+
+      <Page />
+      <ProjectsPage />
+
+      <Chess />
+
+      <ContactPage />
       {/* <svg
         width="800"
         height="400"

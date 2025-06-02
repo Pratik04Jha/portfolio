@@ -4,123 +4,54 @@ import { motion, useScroll, useSpring } from "framer-motion";
 
 const data = [
   {
-    imageSrc: "/portfolio.png",
+    imageSrc: "/Project-Images/LudumVerse.png",
     description:
-      "Navigate your snake, devour fruits, grow endlessly - but don’t bite your own tail or it’s over. A timeless test of reflexes & planning!",
-    bgc: "bg-blue-600",
-    title: "Snake Game",
-    id: "snakeGame",
+      "LudumVerse is your ultimate destination for online browser games. Enjoy a collection of addictive, fun, and free games anytime, anywhere.",
+    title: "LudumVerse | Gaming arcade",
+    id: "ludumVerse",
+    uri: "/",
+    skills: ["React", "Next.js", "Node.js", "MongoDB", "WebGL"],
+    tooltip: "Explore gaming arcade"
   },
   {
-    imageSrc: "/productivity.png",
+    imageSrc: "/Project-Images/ZeniusVerse.png",
     description:
-      "Dodge those evil green pipes! It's the ultimate rage-quit game that dares you to beat your own high score.",
-    bgc: "bg-yellow-600",
-    title: "Flappy Bird",
-    id: "flappyBird",
-  },
-  //
-  {
-    imageSrc: "/redisigning.png",
-    description:
-      "Catch the fruits as much as you can in a limited time period. Fast reflexes and a hunger for sweet points are all you need.",
-    bgc: "bg-green-600",
-    title: "Fruit Catcher",
-    id: "fruitCatcher",
+      "ZeniusVerse is an AI-powered platform offering intelligent solutions for everyday problems with cutting-edge machine learning models.",
+    title: "ZeniusVerse | AI universe",
+    id: "zeniusVerse",
+    uri: "/",
+    skills: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL"],
+    tooltip: "Discover AI universe"
   },
   {
-    imageSrc: "/time.png",
+    imageSrc: "/Project-Images/LudumVerse.png",
     description:
-      "You’re a box on the run in an endless world of spikes and gaps. Dash your way to survival in this fast-paced, reflex-testing runner!",
-    bgc: "bg-green-600",
-    title: "Runner Box",
-    id: "boxRunner",
+      "A marketplace for indie game developers to showcase and sell their creations to a global audience of gamers.",
+    title: "IndieGame Hub | Marketplace",
+    id: "indieGameHub",
+    uri: "/",
+    skills: ["TypeScript", "Next.js", "Stripe", "Firebase", "Tailwind CSS"],
+    tooltip: "Visit marketplace"
   },
   {
-    imageSrc: "/portfolio.png",
+    imageSrc: "/Project-Images/LudumVerse.png",
     description:
-      "Navigate your snake, devour fruits, grow endlessly - but don’t bite your own tail or it’s over. A timeless test of reflexes & planning!",
-    bgc: "bg-blue-600",
-    title: "Snake Game",
-    id: "snakeGame",
-  },
-  {
-    imageSrc: "/productivity.png",
-    description:
-      "Dodge those evil green pipes! It's the ultimate rage-quit game that dares you to beat your own high score.",
-    bgc: "bg-yellow-600",
-    title: "Flappy Bird",
-    id: "flappyBird",
-  },
-  //
-  {
-    imageSrc: "/redisigning.png",
-    description:
-      "Catch the fruits as much as you can in a limited time period. Fast reflexes and a hunger for sweet points are all you need.",
-    bgc: "bg-green-600",
-    title: "Fruit Catcher",
-    id: "fruitCatcher",
-  },
-  {
-    imageSrc: "/time.png",
-    description:
-      "You’re a box on the run in an endless world of spikes and gaps. Dash your way to survival in this fast-paced, reflex-testing runner!",
-    bgc: "bg-green-600",
-    title: "Runner Box",
-    id: "boxRunner",
-  },
-  {
-    imageSrc: "/portfolio.png",
-    description:
-      "Navigate your snake, devour fruits, grow endlessly - but don’t bite your own tail or it’s over. A timeless test of reflexes & planning!",
-    bgc: "bg-blue-600",
-    title: "Snake Game",
-    id: "snakeGame",
-  },
-  {
-    imageSrc: "/productivity.png",
-    description:
-      "Dodge those evil green pipes! It's the ultimate rage-quit game that dares you to beat your own high score.",
-    bgc: "bg-yellow-600",
-    title: "Flappy Bird",
-    id: "flappyBird",
-  },
-  //
-  {
-    imageSrc: "/redisigning.png",
-    description:
-      "Catch the fruits as much as you can in a limited time period. Fast reflexes and a hunger for sweet points are all you need.",
-    bgc: "bg-green-600",
-    title: "Fruit Catcher",
-    id: "fruitCatcher",
-  },
-  {
-    imageSrc: "/time.png",
-    description:
-      "You’re a box on the run in an endless world of spikes and gaps. Dash your way to survival in this fast-paced, reflex-testing runner!",
-    bgc: "bg-green-600",
-    title: "Runner Box",
-    id: "boxRunner",
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
   },
 ];
 
 export default function ProjectsPage() {
-  const { scrollYProgress } = useScroll();
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
-    <div className="flex h-screen bg-black text-white pt-20  relative">
-      {/* Scroll Indicator with Framer Motion */}
-      {/* <div className="absolute left-[50%] top-30 h-[400%] w-[1px] bg-[#52A8FF]  origin-top" /> */}
-
-    
-
+    <div className="flex  bg-[#101010] text-white py-20  relative ">
       <main className="flex flex-col items-center gap-10">
-        <h1 className="text-4xl font-bold line">Featured Projects</h1>
+        <h1 className="text-3xl md:text-5xl cursor-default font-normal w-[40%] pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
+          Turning Imagination Into Real Code
+        </h1>
         <div className="flex flex-wrap gap-20 justify-center">
           {data.map((item, index) => (
             <ProjectCard key={index} data={item} />
