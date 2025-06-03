@@ -18,15 +18,17 @@ const ContactPage = () => {
 
   const handleSubmit = () => {
     console.log("Form submitted:", formData);
-    // Handle form submission here
   };
 
   return (
-    <div id="contact" className="min-h-screen w-full mt-30 relative overflow-hidden">
+    <div
+      id="contact"
+      className="min-h-screen w-full mt-30 relative overflow-hidden"
+    >
       <div className="relative z-10 container mx-auto px-6 py-16 flex items-center justify-center min-h-screen">
         <div className="w-full max-w-md">
           <h1 className="text-3xl md:text-5xl cursor-default font-normal   pb-5 text-center leading-14 bg-gradient-to-r from-[#ffffffb5] via-[#ffffff] to-[#ffffffb5] bg-clip-text text-transparent">
-            We're here to help
+            We are here to help
           </h1>
 
           <div className="space-y-6">
@@ -113,7 +115,7 @@ const ContactPage = () => {
             <blockquote className="">
               <p className="text-gray-300 leading-relaxed">
                 Arctic cut project delays by 30% and transformed our global team
-                communication, saving us hours every week."
+                communication, saving us hours every week.
               </p>
             </blockquote>
           </div>

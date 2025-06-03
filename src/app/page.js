@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-xl w-[30%] text-white max-w-2xl my-5 mx-auto mb-8">
-          I'm Pratik Jha - The creator, building my own digital world through code and design.
+          I am Pratik Jha - The creator, building my own digital world through code and design.
         </p>
 
         <div className="flex gap-6">
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="flex flex-col items-center w-full gap-5 mt-50 justify-center">
         <HeadingSvg />
         <h1 className="text-3xl md:text-5xl cursor-default  font-normal w-[30%] mb-10 pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
-          Don't litsen to me, see what other say
+          Do not litsen to me, see what other say
         </h1>
       </div>
 
