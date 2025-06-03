@@ -1,4 +1,5 @@
 "use client";
+import HeadingSvg from "@/components/svgs/HeadingSvg";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -42,12 +43,68 @@ const data = [
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
     tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
+  },{
+    imageSrc: "/Project-Images/LudumVerse.png",
+    description:
+      "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
+    title: "GameAnalytics Pro | Dashboard",
+    id: "gameAnalytics",
+    uri: "/",
+    skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
+    tooltip: "Check analytics"
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="flex  bg-[#101010] text-white py-20  relative ">
+    <div className="flex  bg-[#101010] flex-col  items-center gap-5 text-white py-20  relative ">
+            <HeadingSvg className="  "/>
+      
       <main className="flex flex-col items-center gap-10">
         <h1 className="text-3xl md:text-5xl cursor-default font-normal w-[40%] pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
           Turning Imagination Into Real Code

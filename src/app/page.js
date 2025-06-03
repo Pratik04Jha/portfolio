@@ -1,77 +1,55 @@
-import ColorfulButton from "@/components/ui/ColorfulButton";
-import Link from "next/link";
 import Page from "./(links)/programming/page";
 import ProjectsPage from "./(links)/projects/page";
 import Chess from "./(links)/chess/page";
 import ContactPage from "./(links)/contact/page";
-// import Image from "next/image";
+import TestimonialSlider from "./(links)/about/Testimonial";
+import HeadingSvg from "@/components/svgs/HeadingSvg";
 
 export default function Home() {
-  return (
-    <div className="h-full  w-full flex-col bg-[#101010] text-white flex items-center justify-center px-4 relative overflow-hidden">
-      <div className="z-10 h-screen justify-center text-center flex flex-col items-center ">
-        {/* <div className="relative w-[200px] h-[200px] mb-4 flex items-center justify-between"> */}
-          {/* <div className="absolute inset-0 rounded-full top-0 left-0  bg-[conic-gradient(red,orange,yellow,green,blue,indigo,violet,red)] animate-spin-slow z-0"></div>
-          <Image
-            src="/Creator.jpg"
-            width={192}
-            height={192}
-            alt="This is the image of the creator"
-            className="rounded-full relative z-20 ml-1"
-          />
-        </div> */}
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4">
-          Creator of Digital Empires
+   
+
+  return (
+    <div className="h-full  w-full flex-col bg-[#101010] text-white flex items-center justify-center  relative ">
+      <div className="z-10 relative h-screen justify-center  w-full text-center flex flex-col items-center ">
+        <div className="inter font-semibold mb-6 bg-[#160f19] border-2  border-[#421A56] flex items-center justify-center gap-3 px-5 py-1 rounded-3xl ">
+          <p>Pratik Jha Portfolio</p>
+        </div>
+
+        <h1 className="manrope text-7xl cursor-default   w-[40%]  text-center leading-20 bg-gradient-to-b from-white to-[#737374] bg-clip-text text-transparent">
+          The Creator of Digital Empire
         </h1>
-        <p className="text-lg sm:text-xl md:text-xl text-white max-w-2xl mx-auto mb-8">
-          Architect of code. Visionary of virtual realms. I don’t just design
-          websites - I engineer experiences, break boundaries, and leave echoes
-          in the digital world. A mind wired to conquer, not conform.
+
+        <p className="text-lg sm:text-xl md:text-xl w-[30%] text-white max-w-2xl my-5 mx-auto mb-8">
+          I'm Pratik Jha - The creator, building my own digital world through code and design.
         </p>
-        <Link href="/projects">
-          <ColorfulButton />
-        </Link>
+
+        <div className="flex gap-6">
+          <button className="w-32 cursor-pointer  bg-gradient-to-br from-[#60B2DC] via-[#54367C] to-[#C358F6] py-3 rounded-lg border-1 border-zinc-700">
+            Projects
+          </button>
+          <button className="w-32 cursor-pointer  py-3 rounded-lg border-1 border-zinc-700">
+            Profile
+          </button>
+        </div>
       </div>
 
       <Page />
+
       <ProjectsPage />
 
       <Chess />
 
-      <ContactPage />
-      {/* <svg
-        width="800"
-        height="400"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-0 left-0 w-full h-full z-1 pointer-events-none"
-        style={{
-          WebkitMaskImage: "radial-gradient( black, transparent )",
-          maskImage: "linear-gradient(to bottom, transparent, black 500%)",
-          maskRepeat: "no-repeat",
-          WebkitMaskRepeat: "no-repeat",
-        }}
-      >
-        <defs>
-          <pattern
-            id="tilePattern"
-            width="50"
-            height="50"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect width="40" height="40" fill="transparent" />
-            <rect
-              width="50"
-              height="50"
-              fill="none"
-              stroke="#555"
-              stroke-width="1"
-            />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#tilePattern)" />
-      </svg>
-      <div className="absolute h-[40px] blur-[100px] animate-rainbow-stripe bg-[length:200%_100%] w-full top-[90%] z-1000 -inset-100  bg-[linear-gradient(to_left,red,orange,yellow,green,cyan,blue,violet,red)] opacity-100  pointer-events-none left-0 " /> */}
+      <div className="flex flex-col items-center w-full gap-5 mt-50 justify-center">
+        <HeadingSvg />
+        <h1 className="text-3xl md:text-5xl cursor-default  font-normal w-[30%] mb-10 pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
+          Don't litsen to me, see what other say
+        </h1>
+      </div>
+
+      <TestimonialSlider />
+
+      <ContactPage className="" />
     </div>
   );
 }

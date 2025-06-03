@@ -7,6 +7,7 @@ import BulletSvg from "@/components/svgs/ChessIcons/BulletSvg";
 import PuzzleSvg from "@/components/svgs/ChessIcons/PuzzleSvg";
 import DailyWeird from "@/components/svgs/ChessIcons/DailyWeird";
 import DailySvg from "@/components/svgs/ChessIcons/DailySvg";
+import HeadingSvg from "@/components/svgs/HeadingSvg";
 
 const chessData = [
   { title: "Rapid", rating: 781, color: "text-[#81B64C]", svg: <RapidSvg /> },
@@ -29,7 +30,10 @@ const chessData = [
 
 export default function Chess() {
   return (
-    <main className="flex flex-col  items-center justify-center pt-20">
+    <main className="flex flex-col  items-center justify-center gap-5 pt-20">
+      <HeadingSvg className="" />
+      <div className="flex flex-col items-center w-full">
+
       <h1 className=" text-3xl md:text-5xl cursor-default font-normal w-1/2  pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
         More Than a Game. A Battlefield of Brilliance
       </h1>
@@ -41,6 +45,7 @@ export default function Chess() {
         link="https://chess.com/members/pratikthejha"
         delay={0}
       />
+      </div>
     </main>
   );
 }

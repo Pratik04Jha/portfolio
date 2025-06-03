@@ -22,12 +22,12 @@ export default function RatingGrid({ title, logo, data, link, delay = 0 }) {
         ))}
       </div>
 
-      <p className="py-4">
+      {/* <p className="py-4">
         To view my current {title.toLowerCase()} rating click {" "}
         <Link href={link} target="_blank" className="text-[#00ffdd]">
           here
         </Link>
-      </p>
+      </p> */}
     </div>
   );
 }

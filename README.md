@@ -49,11 +49,6 @@ If you're:
 - An artist who wants to build something interactive 🎨
 - A curious mind who loves science, space, or just deep convos 🌌
 
-**Let’s build something epic together!**
-
-📬 Drop me a line → your.email@example.com  
-🤝 Open to freelance, collabs, and exciting projects!
-
 ---
 
 ## 📜 License

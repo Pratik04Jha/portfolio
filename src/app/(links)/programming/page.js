@@ -14,6 +14,7 @@ import GithubSvg from "@/components/svgs/GithubSvg";
 import ExpressSvg from "@/components/svgs/ExpressSvg";
 import BootstrampSvg from "@/components/svgs/BootstrampSvg";
 import FramerSvg from "@/components/svgs/FramerSvg";
+import HeadingSvg from "@/components/svgs/HeadingSvg";
 
 // Skill items without boxShadowColor now — we'll map shadows manually
 const skills = [
@@ -102,7 +103,8 @@ const hoverShadowClasses = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen  bg-[#101010] text-white pt-20 flex flex-col items-center justify-center w-full">
+    <main className="min-h-screen   gap-5 text-white pt-20 flex flex-col items-center justify-center w-full">
+      <HeadingSvg className="  "/>
       <div className=" w-full items-center flex flex-col ">
         <h2 className="absolute z-100 text-3xl md:text-5xl cursor-default font-normal w-1/2 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
           Learning Programming Skills Makes Me Powerful
@@ -113,7 +115,7 @@ export default function Page() {
           <div className="absolute w-30 h-full bg-[#101010] -top-10 left-0 blur-xl  " />
           <div className="absolute w-30 h-full bg-[#101010] -top-10 right-0 blur-xl  " />
 
-          <div className="flex flex-wrap w-full justify-center gap-6">
+          <div className="flex flex-wrap w-full justify-center gap-6 bg-[#101010]">
             {skills.map((item, index) => (
               <div
                 key={index}

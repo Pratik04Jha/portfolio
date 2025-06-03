@@ -22,12 +22,8 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full  relative overflow-hidden">
-      {/* Background gradient effects */}
-      
-
+    <div className="min-h-screen w-full mt-30 relative overflow-hidden">
       <div className="relative z-10 container mx-auto px-6 py-16 flex items-center justify-center min-h-screen">
-        {/* Left side - Contact Form */}
         <div className="w-full max-w-md">
           <h1 className="text-3xl md:text-5xl cursor-default font-normal   pb-5 text-center leading-14 bg-gradient-to-r from-[#ffffffb5] via-[#ffffff] to-[#ffffffb5] bg-clip-text text-transparent">
             We're here to help
@@ -53,7 +49,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Email Field */}
             <div>
               <label
                 htmlFor="email"
@@ -72,7 +67,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Message Field */}
             <div>
               <label
                 htmlFor="message"
@@ -91,7 +85,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Submit Button */}
             <button
               onClick={handleSubmit}
               className="bg-white text-black font-normal px-6 py-2 cursor-pointer rounded-3xl  "
@@ -101,23 +94,22 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* Right side - Testimonial Card */}
         <div className="hidden lg:block w-full max-w-sm ml-16">
           <div className="h-100 relative flex flex-col justify-between backdrop-blur-sm border border-gray-900 rounded-2xl p-8 shadow-2xl overflow-hidden">
-            {/* Logo */}
-                      <span className="absolute top-0 left-0 z-1000 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent "></span>
-                       <span className="absolute top-0 left-0 z-100 blur-2xl w-full h-[20px] bg-gradient-to-r from-transparent via-blue-500 to-transparent "></span>
-                      
+            <span className="absolute top-0 left-0 z-1000 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent "></span>
+            <span className="absolute top-0 left-0 z-100 blur-2xl w-full h-[20px] bg-gradient-to-r from-transparent via-blue-500 to-transparent "></span>
+
             <div className="mb-6">
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
                   <span className="text-black font-bold text-sm">PJ</span>
                 </div>
-                <span className="text-white font-semibold text-lg">Pratik Jha</span>
+                <span className="text-white font-semibold text-lg">
+                  Pratik Jha
+                </span>
               </div>
             </div>
 
-            {/* Testimonial */}
             <blockquote className="">
               <p className="text-gray-300 leading-relaxed">
                 Arctic cut project delays by 30% and transformed our global team
