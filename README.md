@@ -65,16 +65,6 @@ Special thanks to [you, the visitor] — for checking out my journey.
 
 > “Nothing is hard, only new.”
 
----
-
-## 🚀 Roadmap
-
-- [x] Launch Portfolio
-- [ ] Add light/dark theme toggle 🌗
-- [ ] Blog CMS integration
-- [ ] Add 3D/animated intro (with Three.js)
-- [ ] Build my own programming language 👨‍💻
-- [ ] Hit 100k+ views on my reels 🤳
 
 ---
 
