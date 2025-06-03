@@ -9,6 +9,7 @@ const linkData = [
   { name: "Projects", href: "#projects" },
   { name: "Chess", href: "#chess" },
   { name: "Contact", href: "#contact" },
+  { name: "Testimonial", href: "#testimonial" },
 ];
 
 const links = [

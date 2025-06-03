@@ -95,7 +95,7 @@ const TestimonialSlider = () => {
   ];
 
   return (
-    <div className="relative w-full h-120 overflow-hidden  bg-[#101010]">
+    <div id="testimonial" className="relative w-full h-120 overflow-hidden  bg-[#101010]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-[600px]">
           {/* First row - moving left */}

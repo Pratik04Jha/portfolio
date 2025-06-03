@@ -4,8 +4,6 @@ import Image from "next/image";
 import Certificate from "./Certificate";
 import EducationCard from "./Education";
 import LanguageCard from "./LanguageCard";
-import FeaturedQuotes from "./FeaturedQuotes";
-import TestimonialSlider from "./Testimonial";
 
 const education = [
   {
@@ -95,6 +93,15 @@ const languages = [
   },
 ];
 
+const skills = [
+  { title: "Web development" },
+  { title: "Software development" },
+  { title: "App development" },
+  { title: "Game development" },
+  { title: "Artificial intelligence" },
+  { title: "Machine learning" },
+];
+
 const page = () => {
   return (
     <>
@@ -105,7 +112,7 @@ const page = () => {
             height={500}
             priority
             className="w-full pointer-events-none h-60 select-none object-cover"
-            src="/banner.jpg"
+            src="/Banner/Banner-1.jpg"
             alt="Banner image"
           />
           <Image
@@ -113,7 +120,7 @@ const page = () => {
             height={500}
             priority
             className="absolute pointer-events-none select-none -z-100 blur-3xl top-0  w-full h-60 object-cover"
-            src="/banner.jpg"
+            src="/Banner/Banner-1.jpg"
             alt="Banner image"
           />
           <div className="absolute left-1/2 top-[100%] -translate-1/2 h-70   rounded-full flex justify-center items-center">
@@ -125,15 +132,19 @@ const page = () => {
               src="/Creator.jpg"
               alt=""
             />
-            <h1 className="absolute  -translate-1/2 top-[100%] w-full text-center  text-3xl font-bold cursor-default left-[50%]  ">
-              Pratik Jha
-            </h1>
+            <div className="absolute  -translate-1/2 top-[100%] w-full text-center  cursor-default left-[50%]  ">
+              <h1 className="text-3xl font-bold ">Pratik Jha</h1>
+
+              <h3 className="text-zinc-400">New Delhi, India</h3>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-5 h-[60%] flex-col ">
-        <p className=" text-center mt-45 w-[70%]">
+      <div className="flex justify-center items-center gap-5 h-[60%] mt-45 flex-col ">
+        <h1 className="text-3xl  text-center mt-10 font-bold">Who am i?</h1>
+
+        <p className=" text-center w-[70%] ">
           Hey, I’m Pratik — a creator, explorer, and tech enthusiast obsessed
           with turning ideas into reality. My journey began with curiosity and a
           keyboard, and ever since, I’ve been diving into everything from web
@@ -162,27 +173,28 @@ const page = () => {
           ))}
         </div>
 
+        <h1 className=" text-3xl  text-center mt-10 font-bold ">Skills</h1>
+        <div className="flex flex-col w-[75%] border-1 border-zinc-800 rounded-xl ">
+          {skills.map((items, index) => (
+            <div key={index} className="h-15 px-4 w-full flex items-center  border-b border-zinc-800 cursor-pointer">
+              <p className="w-full ">{items.title}</p>
+            </div>
+          ))}
+
+          <div className="h-15 w-full flex hover:bg-zinc-900/60 cursor-pointer transition-colors duration-300  items-center justify-center font-semibold ">
+            <p className="">View all 40 skills</p>
+          </div>
+        </div>
+
         <h1 className=" text-3xl  text-center mt-10 font-bold ">
           Languages (Not programming)
         </h1>
 
-        <div className="flex gap-4">
+        <div className="flex gap-8 pb-20">
           {languages.map((items, index) => (
             <LanguageCard key={index} languageData={items} />
           ))}
         </div>
-
-        <h1 className=" text-3xl  text-center mt-10 font-bold ">
-          Featured quotes
-        </h1>
-
-        <FeaturedQuotes />
-
-        <h1 className=" text-3xl  text-center mt-10 font-bold ">
-          Testimonials
-        </h1>
-
-        <TestimonialSlider />
       </div>
     </>
   );
