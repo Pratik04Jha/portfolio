@@ -103,7 +103,7 @@ const hoverShadowClasses = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen   gap-5 text-white pt-20 flex flex-col items-center justify-center w-full">
+    <main id="programming" className="min-h-screen   gap-5 text-white pt-20 flex flex-col items-center justify-center w-full">
       <HeadingSvg className="  "/>
       <div className=" w-full items-center flex flex-col ">
         <h2 className="absolute z-100 text-3xl md:text-5xl cursor-default font-normal w-1/2 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">

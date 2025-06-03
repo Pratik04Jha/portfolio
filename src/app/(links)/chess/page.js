@@ -30,7 +30,7 @@ const chessData = [
 
 export default function Chess() {
   return (
-    <main className="flex flex-col  items-center justify-center gap-5 pt-20">
+    <main id="chess" className="flex flex-col min-h-screen items-center justify-center gap-5 pt-20">
       <HeadingSvg className="" />
       <div className="flex flex-col items-center w-full">
 

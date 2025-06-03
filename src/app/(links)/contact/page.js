@@ -22,7 +22,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full mt-30 relative overflow-hidden">
+    <div id="contact" className="min-h-screen w-full mt-30 relative overflow-hidden">
       <div className="relative z-10 container mx-auto px-6 py-16 flex items-center justify-center min-h-screen">
         <div className="w-full max-w-md">
           <h1 className="text-3xl md:text-5xl cursor-default font-normal   pb-5 text-center leading-14 bg-gradient-to-r from-[#ffffffb5] via-[#ffffff] to-[#ffffffb5] bg-clip-text text-transparent">

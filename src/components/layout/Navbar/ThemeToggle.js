@@ -1,52 +1,48 @@
-'use client';
+"use client";
+import { useState, useEffect } from "react";
 
-import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+const ThemeToggle = () => {
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // Check for saved preference or system preference
+    const isDark =
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    setDarkMode(isDark);
+    document.documentElement.classList.toggle("dark", isDark);
   }, []);
 
-  if (!mounted) return null;
-
-  const isLight = theme === 'light';
+  const toggleTheme = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.theme = newMode ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", newMode);
+  };
 
   return (
     <button
-      onClick={() => setTheme(isLight ? 'dark' : 'light')}
-      className="p-2 rounded-lg  transition relative cursor-pointer"
+      onClick={toggleTheme}
+      className="relative inline-flex h-5 w-10 items-center rounded-full transition-colors cursor-pointer"
+      aria-label="Toggle dark mode"
     >
-      <AnimatePresence mode="wait" initial={false}>
-        {isLight ? (
-          <motion.div
-            key="sun"
-            initial={{ opacity: 0, rotate: -180, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1.5 }}
-            exit={{ opacity: 0, rotate: 180, scale: 0.5 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-          >
-            <Sun className=""  />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="moon"
-            initial={{ opacity: 0, rotate: 180, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1.5 }}
-            exit={{ opacity: 0, rotate: -180, scale: 0.5 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
-          >
-            <Moon className="" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Track */}
+      <span
+        className={`inline-block h-5 w-10 rounded-full transition-colors ${
+          darkMode ? "bg-indigo-800" : "bg-zinc-800"
+        }`}
+      ></span>
+
+      {/* Thumb (circle) */}
+      <span
+        className={`absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow-md transform transition-transform ${
+          darkMode ? "translate-x-5" : "translate-x-0"
+        }`}
+      ></span>
     </button>
   );
-}
+};
+
+export default ThemeToggle;

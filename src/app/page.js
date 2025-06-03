@@ -7,11 +7,10 @@ import HeadingSvg from "@/components/svgs/HeadingSvg";
 
 export default function Home() {
 
-   
-
+  
   return (
     <div className="h-full  w-full flex-col bg-[#101010] text-white flex items-center justify-center  relative ">
-      <div className="z-10 relative h-screen justify-center  w-full text-center flex flex-col items-center ">
+      <div id="home" className="z-10 min-h-screen relative h-screen justify-center  w-full text-center flex flex-col items-center ">
         <div className="inter font-semibold mb-6 bg-[#160f19] border-2  border-[#421A56] flex items-center justify-center gap-3 px-5 py-1 rounded-3xl ">
           <p>Pratik Jha Portfolio</p>
         </div>
@@ -34,11 +33,11 @@ export default function Home() {
         </div>
       </div>
 
-      <Page />
+      <Page  />
 
-      <ProjectsPage />
+      <ProjectsPage  />
 
-      <Chess />
+      <Chess id="chess" />
 
       <div className="flex flex-col items-center w-full gap-5 mt-50 justify-center">
         <HeadingSvg />

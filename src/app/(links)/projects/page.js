@@ -1,7 +1,8 @@
-"use client";
+// "use client";
 import HeadingSvg from "@/components/svgs/HeadingSvg";
 import ProjectCard from "@/components/ui/ProjectCard";
-import { motion, useScroll, useSpring } from "framer-motion";
+import React from 'react'
+// import { motion, useScroll, useSpring } from "framer-motion";
 
 const data = [
   {
@@ -12,7 +13,7 @@ const data = [
     id: "ludumVerse",
     uri: "/",
     skills: ["React", "Next.js", "Node.js", "MongoDB", "WebGL"],
-    tooltip: "Explore gaming arcade"
+    tooltip: "Explore gaming arcade",
   },
   {
     imageSrc: "/Project-Images/ZeniusVerse.png",
@@ -22,7 +23,7 @@ const data = [
     id: "zeniusVerse",
     uri: "/",
     skills: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL"],
-    tooltip: "Discover AI universe"
+    tooltip: "Discover AI universe",
   },
   {
     imageSrc: "/Project-Images/LudumVerse.png",
@@ -32,7 +33,7 @@ const data = [
     id: "indieGameHub",
     uri: "/",
     skills: ["TypeScript", "Next.js", "Stripe", "Firebase", "Tailwind CSS"],
-    tooltip: "Visit marketplace"
+    tooltip: "Visit marketplace",
   },
   {
     imageSrc: "/Project-Images/LudumVerse.png",
@@ -42,8 +43,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -51,8 +53,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -60,8 +63,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -69,8 +73,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -78,8 +83,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -87,8 +93,9 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
-  },{
+    tooltip: "Check analytics",
+  },
+  {
     imageSrc: "/Project-Images/LudumVerse.png",
     description:
       "An analytics platform for game developers to track player behavior and optimize their gaming experiences.",
@@ -96,15 +103,15 @@ const data = [
     id: "gameAnalytics",
     uri: "/",
     skills: ["D3.js", "React", "Express", "MySQL", "AWS"],
-    tooltip: "Check analytics"
+    tooltip: "Check analytics",
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="flex  bg-[#101010] flex-col  items-center gap-5 text-white py-20  relative ">
-            <HeadingSvg className="  "/>
-      
+    <div id="projects" className="flex min-h-screen bg-[#101010] flex-col  items-center gap-5 text-white py-20  relative ">
+      <HeadingSvg className="  " />
+
       <main className="flex flex-col items-center gap-10">
         <h1 className="text-3xl md:text-5xl cursor-default font-normal w-[40%] pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
           Turning Imagination Into Real Code
@@ -118,3 +125,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
