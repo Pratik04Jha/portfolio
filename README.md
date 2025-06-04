@@ -1,4 +1,4 @@
-# 🌐 Pratik Jha — Portfolio Website
+# Pratik Jha | Portfolio Website
 
 Welcome to the official portfolio of **Pratik Jha** — a 16-year-old web wizard, creative developer, game designer, artist, explorer, and a trillionaire in the making 🚀💰  
 This website is my digital playground where I showcase projects, share ideas, and let my curiosity roam wild.
@@ -65,16 +65,6 @@ Special thanks to [you, the visitor] — for checking out my journey.
 
 > “Nothing is hard, only new.”
 
----
-
-## 🚀 Roadmap
-
-- [x] Launch Portfolio
-- [ ] Add light/dark theme toggle 🌗
-- [ ] Blog CMS integration
-- [ ] Add 3D/animated intro (with Three.js)
-- [ ] Build my own programming language 👨‍💻
-- [ ] Hit 100k+ views on my reels 🤳
 
 ---
 
