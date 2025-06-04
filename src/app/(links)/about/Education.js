@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const EducationCard = ({ educationData }) => {
@@ -42,9 +43,11 @@ const EducationCard = ({ educationData }) => {
               </button>
             </a>
 
-            <button className="py-1 px-4 text-sm  rounded-3xl border-2 cursor-pointer border-zinc-300 transition-colors duration-300 hover:border-white bg-white/5">
-              See details
-            </button>
+            <Link href="/about/AkashModelSchool">
+              <button className="py-1 px-4 text-sm  rounded-3xl border-2 cursor-pointer border-zinc-300 transition-colors duration-300 hover:border-white bg-white/5">
+                See details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
