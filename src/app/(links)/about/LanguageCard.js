@@ -15,8 +15,8 @@ const LanguageCard = ({ languageData }) => {
           {languageData.level}
         </li>
         <li>
-          <span className="font-medium text-white">Rating:</span>{" "}
-          {languageData.rating}
+          <span className="font-medium text-white ">Rating:</span>{" "}
+          <span className="text-xl">{languageData.rating}</span>
         </li>
         <li>
           <span className="font-medium text-white">Language preview:</span>{" "}

@@ -13,7 +13,7 @@ const linkData = [
 ];
 
 const links = [
-  { name: "Art gallery", href: "/artGallery" },
+  // { name: "Art gallery", href: "/artGallery" },
   { name: "Blogs", href: "/blogs" },
 ];
 

@@ -1,9 +1,15 @@
+"use client";
+import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import Certificate from "./Certificate";
 import EducationCard from "./Education";
 import LanguageCard from "./LanguageCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Pagination } from "swiper/modules";
 
 const education = [
   {
@@ -56,6 +62,50 @@ const certificates = [
     description:
       "Gained expertise in user-centered design principles, wireframing, prototyping, and conducting usability studies.",
   },
+  {
+    imgSrc: "/certificate.png",
+    title: "UI/UX Design Specialization",
+    issuedBy: "Google",
+    date: "January 2025",
+    credentialId: "GOOGLE-UX-7583",
+    credentialUrl:
+      "https://coursera.org/professional-certificates/google-ux-design",
+    description:
+      "Gained expertise in user-centered design principles, wireframing, prototyping, and conducting usability studies.",
+  },
+  {
+    imgSrc: "/certificate.png",
+    title: "UI/UX Design Specialization",
+    issuedBy: "Google",
+    date: "January 2025",
+    credentialId: "GOOGLE-UX-7583",
+    credentialUrl:
+      "https://coursera.org/professional-certificates/google-ux-design",
+    description:
+      "Gained expertise in user-centered design principles, wireframing, prototyping, and conducting usability studies.",
+  },
+  {
+    imgSrc: "/certificate.png",
+    title: "UI/UX Design Specialization",
+    issuedBy: "Google",
+    date: "January 2025",
+    credentialId: "GOOGLE-UX-7583",
+    credentialUrl:
+      "https://coursera.org/professional-certificates/google-ux-design",
+    description:
+      "Gained expertise in user-centered design principles, wireframing, prototyping, and conducting usability studies.",
+  },
+  {
+    imgSrc: "/certificate.png",
+    title: "UI/UX Design Specialization",
+    issuedBy: "Google",
+    date: "January 2025",
+    credentialId: "GOOGLE-UX-7583",
+    credentialUrl:
+      "https://coursera.org/professional-certificates/google-ux-design",
+    description:
+      "Gained expertise in user-centered design principles, wireframing, prototyping, and conducting usability studies.",
+  },
 ];
 
 const languages = [
@@ -63,7 +113,7 @@ const languages = [
     title: "English",
     description:
       "My go-to language for learning, coding, and memeing. From tech docs to late-night deep dives on YouTube, English has basically become my second brain.",
-    rating: "⭐⭐⭐⭐", // out of 5
+    rating: "★★★★", // out of 5
     level: "Fluent",
     helloInLanguage: "Hello",
   },
@@ -71,7 +121,7 @@ const languages = [
     title: "Hindi",
     description:
       "My mother tongue and emotional core. This is the language that shaped my childhood, my sarcasm, and my sense of timing in jokes. I dream in Hindi, argue in Hindi, and win in Hindi.",
-    rating: "⭐⭐⭐⭐⭐",
+    rating: "★★★★★",
     level: "Native",
     helloInLanguage: "नमस्ते",
   },
@@ -79,7 +129,7 @@ const languages = [
     title: "German",
     description:
       "Started learning thanks to my sister repping Germany. It’s logical, intense, and sometimes feels like you’re casting spells when you speak it. Still learning, still fascinated.",
-    rating: "⭐⭐⭐",
+    rating: "★★★",
     level: "Beginner",
     helloInLanguage: "Hallo",
   },
@@ -87,7 +137,7 @@ const languages = [
     title: "Italian",
     description:
       "Not fluent, but deeply in love with the rhythm. I got pulled in by the food, stayed for the flair. One day I’ll order pasta in Italian without Google Translate. Manifesting that.",
-    rating: "⭐⭐⭐",
+    rating: "★★★",
     level: "Beginner",
     helloInLanguage: "Ciao",
   },
@@ -160,11 +210,26 @@ const page = () => {
           Licences and certificates
         </h1>
 
-        <div className="flex gap-2">
-          {certificates.map((data, index) => (
-            <Certificate key={index} data={data} />
-          ))}
-        </div>
+        <Swiper
+          slidesPerView={3}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination",
+            bulletClass: "custom-bullet",
+            bulletActiveClass: "custom-bullet-active",
+          }}
+          modules={[Pagination]}
+          className="mySwiper relative cursor-grab"
+        >
+          <div className="flex gap-2">
+            {certificates.map((data, index) => (
+              <SwiperSlide key={index}>
+                <Certificate data={data} />
+              </SwiperSlide>
+            ))}
+          </div>
+          <div className="custom-pagination mt-4 flex justify-center gap-2" />
+        </Swiper>
 
         <h1 className=" text-3xl  text-center mt-10 font-bold ">Education</h1>
         <div className="w-[80%]">
@@ -176,7 +241,10 @@ const page = () => {
         <h1 className=" text-3xl  text-center mt-10 font-bold ">Skills</h1>
         <div className="flex flex-col w-[75%] border-1 border-zinc-800 rounded-xl ">
           {skills.map((items, index) => (
-            <div key={index} className="h-15 px-4 w-full flex items-center  border-b border-zinc-800 cursor-pointer">
+            <div
+              key={index}
+              className="h-15 px-4 w-full flex items-center  border-b border-zinc-800 cursor-pointer"
+            >
               <p className="w-full ">{items.title}</p>
             </div>
           ))}
