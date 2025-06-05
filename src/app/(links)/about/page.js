@@ -144,15 +144,6 @@ const languages = [
   },
 ];
 
-const skills = [
-  { title: "Web development" },
-  { title: "Software development" },
-  { title: "App development" },
-  { title: "Game development" },
-  { title: "Artificial intelligence" },
-  { title: "Machine learning" },
-];
-
 const allSkills = [
   { title: "Web development" },
   { title: "Software development" },
@@ -196,7 +187,7 @@ const allSkills = [
   { title: "Team Collaboration" },
 ];
 
-const page = () => {
+const Page = () => {
   const [showAllSkills, setShowAllSkills] = useState(false);
 
   const toggleSkills = () => {
@@ -334,4 +325,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,13 +4,15 @@ import Chess from "./(links)/chess/page";
 import ContactPage from "./(links)/contact/page";
 import TestimonialSlider from "./(links)/about/Testimonial";
 import HeadingSvg from "@/components/svgs/HeadingSvg";
+import Link from "next/link";
 
 export default function Home() {
-
-  
   return (
     <div className="h-full  w-full flex-col bg-[#101010] text-white flex items-center justify-center  relative ">
-      <div id="home" className="z-10 min-h-screen relative h-screen justify-center  w-full text-center flex flex-col items-center ">
+      <div
+        id="home"
+        className="z-10 min-h-screen relative h-screen justify-center  w-full text-center flex flex-col items-center "
+      >
         <div className="inter font-semibold mb-6 bg-[#160f19] border-2  border-[#421A56] flex items-center justify-center gap-3 px-5 py-1 rounded-3xl ">
           <p>Pratik Jha Portfolio</p>
         </div>
@@ -20,28 +22,34 @@ export default function Home() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-xl w-[30%] text-white max-w-2xl my-5 mx-auto mb-8">
-          I am Pratik Jha - The creator, building my own digital world through code and design.
+          I am Pratik Jha - The creator, building my own digital world through
+          code and design.
         </p>
 
         <div className="flex gap-6">
-          <button className="w-32 cursor-pointer  bg-gradient-to-br from-[#60B2DC] via-[#54367C] to-[#C358F6] py-3 rounded-lg border-1 border-zinc-700">
-            Projects
-          </button>
+          <Link href="/about">
+            <button className="w-32 cursor-pointer  bg-gradient-to-br from-[#60B2DC] via-[#54367C] to-[#C358F6] py-3 rounded-lg border-1 border-zinc-700">
+              Profile
+            </button>
+          </Link>
           <button className="w-32 cursor-pointer  py-3 rounded-lg border-1 border-zinc-700">
-            Profile
+            Projects
           </button>
         </div>
       </div>
 
-      <Page  />
+      <Page />
 
-      <ProjectsPage  />
+      <ProjectsPage />
 
       <Chess id="chess" />
 
-      <div id="testimonial" className="min-h-20 flex flex-col items-center w-full gap-5 mt-50 justify-center">
+      <div
+        id="testimonial"
+        className="min-h-20 flex flex-col items-center w-full gap-5 mt-50 justify-center"
+      >
         <HeadingSvg />
-        <h1  className=" text-3xl md:text-5xl cursor-default  font-normal w-[30%] mb-10 pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
+        <h1 className=" text-3xl md:text-5xl cursor-default  font-normal w-[30%] mb-10 pb-5 text-center leading-14 bg-gradient-to-t from-white to-[#ffffffb5] bg-clip-text text-transparent">
           Do not litsen to me, see what other say
         </h1>
       </div>
