@@ -8,8 +8,8 @@ const linkData = [
   { name: "Programming", href: "#programming" },
   { name: "Projects", href: "#projects" },
   { name: "Chess", href: "#chess" },
-  { name: "Contact", href: "#contact" },
   { name: "Testimonial", href: "#testimonial" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const links = [

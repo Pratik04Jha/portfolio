@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -152,7 +153,56 @@ const skills = [
   { title: "Machine learning" },
 ];
 
+const allSkills = [
+  { title: "Web development" },
+  { title: "Software development" },
+  { title: "App development" },
+  { title: "Game development" },
+  { title: "Artificial intelligence" },
+  { title: "Machine learning" },
+  { title: "Frontend Development" },
+  { title: "Backend Development" },
+  { title: "React.js" },
+  { title: "Next.js" },
+  { title: "Node.js" },
+  { title: "JavaScript" },
+  { title: "TypeScript" },
+  { title: "HTML/CSS" },
+  { title: "Tailwind CSS" },
+  { title: "UI/UX Design" },
+  { title: "Responsive Design" },
+  { title: "Git/GitHub" },
+  { title: "RESTful APIs" },
+  { title: "GraphQL" },
+  { title: "Database Design" },
+  { title: "SQL" },
+  { title: "MongoDB" },
+  { title: "Firebase" },
+  { title: "Python" },
+  { title: "Java" },
+  { title: "C++" },
+  { title: "Data Structures" },
+  { title: "Algorithms" },
+  { title: "Problem Solving" },
+  { title: "Agile Methodologies" },
+  { title: "DevOps" },
+  { title: "Docker" },
+  { title: "AWS" },
+  { title: "Testing" },
+  { title: "Debugging" },
+  { title: "Performance Optimization" },
+  { title: "Technical Writing" },
+  { title: "Project Management" },
+  { title: "Team Collaboration" },
+];
+
 const page = () => {
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
+  const toggleSkills = () => {
+    setShowAllSkills(!showAllSkills);
+  };
+
   return (
     <>
       <div className="h-[100%] w-full mt-15 ">
@@ -195,14 +245,14 @@ const page = () => {
         <h1 className="text-3xl  text-center mt-10 font-bold">Who am i?</h1>
 
         <p className=" text-center w-[70%] ">
-          Hey, I’m Pratik — a creator, explorer, and tech enthusiast obsessed
+          Hey, I am Pratik — a creator, explorer, and tech enthusiast obsessed
           with turning ideas into reality. My journey began with curiosity and a
-          keyboard, and ever since, I’ve been diving into everything from web
-          development and game design to experimenting with new tech. I don’t
+          keyboard, and ever since, I have been diving into everything from web
+          development and game design to experimenting with new tech. I do not
           just build for the sake of it — I build to learn, grow, and push the
-          boundaries of what’s possible. Every bug I fix, every game I release,
-          every project I launch — it’s all part of the thrill. This arcade is
-          more than just games — it’s a piece of my journey, and it’s only
+          boundaries of what is possible. Every bug I fix, every game I release,
+          every project I launch — it is all part of the thrill. This arcade is
+          more than just games — it is a piece of my journey, and it is only
           getting started.
         </p>
 
@@ -238,20 +288,36 @@ const page = () => {
           ))}
         </div>
 
-        <h1 className=" text-3xl  text-center mt-10 font-bold ">Skills</h1>
-        <div className="flex flex-col w-[75%] border-1 border-zinc-800 rounded-xl ">
-          {skills.map((items, index) => (
-            <div
-              key={index}
-              className="h-15 px-4 w-full flex items-center  border-b border-zinc-800 cursor-pointer"
-            >
-              <p className="w-full ">{items.title}</p>
-            </div>
-          ))}
+        <h1 className="text-3xl text-center mt-10 font-bold">Skills</h1>
+        <div className="flex flex-col w-[75%] border-1 border-zinc-800 rounded-xl overflow-hidden">
+          <AnimatePresence initial={false}>
+            {allSkills
+              .slice(0, showAllSkills ? allSkills.length : 6)
+              .map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-4 w-full border-b border-zinc-800 cursor-pointer overflow-hidden"
+                >
+                  <p className="py-3 w-full">{item.title}</p>
+                </motion.div>
+              ))}
+          </AnimatePresence>
 
-          <div className="h-15 w-full flex hover:bg-zinc-900/60 cursor-pointer transition-colors duration-300  items-center justify-center font-semibold ">
-            <p className="">View all 40 skills</p>
-          </div>
+          <motion.div
+            whileHover={{ backgroundColor: "rgba(24, 24, 27, 0.6)" }}
+            className="h-15 w-full flex cursor-pointer items-center justify-center font-semibold py-3"
+            onClick={toggleSkills}
+          >
+            <p>
+              {showAllSkills
+                ? "View less"
+                : `View all ${allSkills.length} skills`}
+            </p>
+          </motion.div>
         </div>
 
         <h1 className=" text-3xl  text-center mt-10 font-bold ">
