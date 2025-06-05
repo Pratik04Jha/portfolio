@@ -19,7 +19,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="w-full fixed top-0 left-0 z-1000000000 flex justify-between items-center py-4 border-b-1 border-zinc-800 bg-[#101010]/80    backdrop-blur-xl px-10">
+    <nav className="w-full fixed top-0 left-0 z-1000000000 flex justify-between items-center py-4 border-b-1 border-zinc-800     backdrop-blur-xl px-10">
       <div className="flex justify-start items-center gap-10 ">
         <Link href="/">
           <div className="font-semibold">Pratik Jha</div>
