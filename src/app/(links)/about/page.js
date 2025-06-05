@@ -196,7 +196,7 @@ const allSkills = [
   { title: "Team Collaboration" },
 ];
 
-const page = () => {
+const Page = () => {
   const [showAllSkills, setShowAllSkills] = useState(false);
 
   const toggleSkills = () => {
@@ -334,4 +334,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

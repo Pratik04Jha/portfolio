@@ -4,6 +4,7 @@ import Chess from "./(links)/chess/page";
 import ContactPage from "./(links)/contact/page";
 import TestimonialSlider from "./(links)/about/Testimonial";
 import HeadingSvg from "@/components/svgs/HeadingSvg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -33,11 +34,13 @@ export default function Home() {
         </p>
 
         <div className="flex gap-6">
+          <Link href="/about">
           <button className="w-32 cursor-pointer bg-gradient-to-br from-[#60B2DC] via-[#54367C] to-[#C358F6] py-3 rounded-lg border border-zinc-300 dark:border-zinc-700">
-            Projects
-          </button>
-          <button className="w-32 cursor-pointer py-3 rounded-lg border border-zinc-300 dark:border-zinc-700">
             Profile
+          </button>
+          </Link>
+          <button className="w-32 cursor-pointer py-3 rounded-lg border border-zinc-300 dark:border-zinc-700">
+            Projects
           </button>
         </div>
       </div>
